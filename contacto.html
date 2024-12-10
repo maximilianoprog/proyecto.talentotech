@@ -6,40 +6,49 @@
     <title>Librería ABC - Contacto</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Librería ABC</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="reseñas.html">Reseñas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+
+    <header class="bg-primary text-white text-center py-3">
+      <h1>Tienda de Productos</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <a class="navbar-brand" href="reseñas.html">Reseñas</a>
+        <a class="navbar-brand" href="contacto.html">Contacto</a>
+        <a class="navbar-brand" href="productos.html">Productos</a>
+        <a class="navbar-brand" href="carrito.html">Carrito</a>
+      </nav>
+  </header>
 
     <!-- Main - Sección Contacto -->
-    <main>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form action="https://formspree.io/f/xldedoll" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <button type="submit">Enviar</button>
+    <main class="container py-5">
+        <section id="contacto" class="bg-light p-4 rounded shadow-sm">
+            <h2 class="text-center mb-4">Contacto</h2>
+            <form id="contact-form" action="https://formspree.io/f/xldedoll" method="POST" class="mx-auto" style="max-width: 500px;">
+                <div class="form-group mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="form-control" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Librería ABC</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
